@@ -1,4 +1,8 @@
-<footer class="footer">
+import "./Footer.scss"
+
+function Footer() {
+  return(
+    <footer class="footer">
   <div class="footer__container">
     <div class="footer__top container">
       <div class="footer__about">
@@ -125,4 +129,8 @@
       </div>
     </div>
   </div>
-</footer>;
+</footer>
+  )
+}
+
+export default Footer
