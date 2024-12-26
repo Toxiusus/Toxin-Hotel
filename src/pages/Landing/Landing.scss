@@ -1,0 +1,27 @@
+.landing {
+  min-height: calc(100vh - 67px);
+  background-image: url("../../assets/img/landing-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.landing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 320px;
+  padding: 70px 0 0 140px;
+}
+
+.landing__text {
+  font-size: 16px;
+  align-self: flex-end;
+  color: rgba(31, 32, 65, 0.75);
+  max-width: 450px;
+  padding: 450px 133px 21px 0;
+  text-align: end;
+  line-height: 24px;
+}
