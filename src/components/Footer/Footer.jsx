@@ -1,4 +1,9 @@
 import "./Footer.scss"
+import Facebook from "../../assets/img/facebook.svg"
+import Instagram from "../../assets/img/instagram.svg"
+import Twitter from "../../assets/img/twitter.svg"
+import Logo from "../../assets/img/Logo.svg"
+import ArrowRight from "../../assets/img/arrow-right.svg"
 
 function Footer() {
   return(
@@ -7,7 +12,7 @@ function Footer() {
     <div class="footer__top container">
       <div class="footer__about">
         <a href="#">
-          <img src="/img/Logo.6d39cdbf.svg" alt="logo" />
+          <img src={Logo} alt="logo" />
         </a>
         <p class="footer__about-text">
           Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
@@ -98,7 +103,7 @@ function Footer() {
             placeholder="Email"
           />
           <button class="btn-reset footer__btn">
-            <img src="/img/arrow-right.9baa87c8.svg" alt="arrow" />
+            <img src={ArrowRight} alt="arrow-right" />
           </button>
         </form>
         <p></p>
@@ -112,17 +117,17 @@ function Footer() {
         <ul class="list-reset footer__social">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <img src="/img/twitter.8b6cae30.svg" alt="twitter" />
+              <img src={Twitter} alt="twitter" />
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <img src="/img/facebook.6ecf37c1.svg" alt="facebook" />
+              <img src={Facebook} alt="facebook" />
             </a>
           </li>
           <li class="footer__social-item">
             <a class="footer__social-link" href="#">
-              <img src="/img/instagram.cb272556.svg" alt="instagram" />
+              <img src={Instagram} alt="instagram" />
             </a>
           </li>
         </ul>
