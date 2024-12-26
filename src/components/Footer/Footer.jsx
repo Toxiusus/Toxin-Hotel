@@ -7,126 +7,126 @@ import ArrowRight from "../../assets/img/arrow-right.svg"
 
 function Footer() {
   return(
-    <footer class="footer">
-  <div class="footer__container">
-    <div class="footer__top container">
-      <div class="footer__about">
+    <footer className="footer">
+  <div className="footer__container">
+    <div className="footer__top container">
+      <div className="footer__about">
         <a href="#">
           <img src={Logo} alt="logo" />
         </a>
-        <p class="footer__about-text">
+        <p className="footer__about-text">
           Бронирование номеров в лучшем отеле 2019 года по версии ассоциации
           «Отельные взгляды»
         </p>
       </div>
-      <div class="footer__column">
-        <h3 class="footer__title">навигация</h3>
-        <ul class="list-reset footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+      <div className="footer__column">
+        <h3 className="footer__title">навигация</h3>
+        <ul className="list-reset footer__list">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               О нас
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Новости
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Служба поддержки
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Услуги
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__column">
-        <h3 class="footer__title">о нас</h3>
-        <ul class="list-reset footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+      <div className="footer__column">
+        <h3 className="footer__title">о нас</h3>
+        <ul className="list-reset footer__list">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               О сервисе
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Наша команда
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Вакансии
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Инвесторы
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__column">
-        <h3 class="footer__title">Служба поддержки</h3>
-        <ul class="list-reset footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+      <div className="footer__column">
+        <h3 className="footer__title">Служба поддержки</h3>
+        <ul className="list-reset footer__list">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Соглашения
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Сообщества
             </a>
           </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">
+          <li className="footer__item">
+            <a className="footer__link" href="#">
               Связь с нами
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__subscribe">
-        <h3 class="footer__title">навигация</h3>
-        <p class="footer__subscribe-text">
+      <div className="footer__subscribe">
+        <h3 className="footer__title">навигация</h3>
+        <p className="footer__subscribe-text">
           Получайте специальные предложения и новости сервиса
         </p>
         <form action="footer__form form">
           <input
-            class="footer__input form__input"
+            className="footer__input form__input"
             type="email"
             name="email"
             required=""
             placeholder="Email"
           />
-          <button class="btn-reset footer__btn">
+          <button className="btn-reset footer__btn">
             <img src={ArrowRight} alt="arrow-right" />
           </button>
         </form>
         <p></p>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="footer__bottom-container">
-        <span class="footer__copyright">
+    <div className="footer__bottom">
+      <div className="footer__bottom-container">
+        <span className="footer__copyright">
           Copyright © 2018 Toxin отель. Все права защищены.
         </span>
-        <ul class="list-reset footer__social">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
+        <ul className="list-reset footer__social">
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
               <img src={Twitter} alt="twitter" />
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
               <img src={Facebook} alt="facebook" />
             </a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">
+          <li className="footer__social-item">
+            <a className="footer__social-link" href="#">
               <img src={Instagram} alt="instagram" />
             </a>
           </li>

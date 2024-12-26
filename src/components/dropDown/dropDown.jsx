@@ -1,32 +1,43 @@
-function dropDown() {
+import React, { useState } from "react";
+
+import "./Dropdown.scss";
+
+function Dropdown() {
+  const [adult, setAdult] = useState(0);
+
+  const clickMinus = () => {
+    setAdult(adult -1)
+  }
+
   return (
-    <div class="dropdown">
+    <div className="dropdown">
       <h3>гости</h3>
-      <div class="dropdown__select">
-        <span class="dropdown__selected">Сколько гостей</span>
-        <div class="dropdown__caret">
+      <div className="dropdown__select">
+        <span className="dropdown__selected">Сколько гостей</span>
+        <div className="dropdown__caret">
           <img src="/img/arrow-down.e85954bc.svg" alt="arrow-down" />
         </div>
       </div>
-      <ul class="dropdown__menu list-reset">
-        <li class="dropdown__item">
-          <p class="dropdown__item-text">взрослые</p>
-          <div class="dropdown__item-controls">
+      <ul className="dropdown__menu list-reset">
+        <li className="dropdown__item">
+          <p className="dropdown__item-text">взрослые</p>
+          <div className="dropdown__item-controls">
             <button
-              class="dropdown__item-minus dropdown__btn"
+              onClick={clickMinus}
+              className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="adult"
             >
               -
             </button>
             <input
-              class="dropdown__item-input"
+              className="dropdown__item-input"
               type="number"
-              value="0"
+              value={adult}
               id="adultCounter"
             />
             <button
-              class="dropdown__item-plus dropdown__btn"
+              className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="adult"
             >
@@ -34,24 +45,24 @@ function dropDown() {
             </button>
           </div>
         </li>
-        <li class="dropdown__item">
-          <p class="dropdown__item-text">дети</p>
-          <div class="dropdown__item-controls">
+        <li className="dropdown__item">
+          <p className="dropdown__item-text">дети</p>
+          <div className="dropdown__item-controls">
             <button
-              class="dropdown__item-minus dropdown__btn"
+              className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="children"
             >
               -
             </button>
             <input
-              class="dropdown__item-input"
+              className="dropdown__item-input"
               type="number"
               value="0"
               id="childrenCounter"
             />
             <button
-              class="dropdown__item-plus dropdown__btn"
+              className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="children"
             >
@@ -59,24 +70,24 @@ function dropDown() {
             </button>
           </div>
         </li>
-        <li class="dropdown__item">
-          <p class="dropdown__item-text">младенцы</p>
-          <div class="dropdown__item-controls">
+        <li className="dropdown__item">
+          <p className="dropdown__item-text">младенцы</p>
+          <div className="dropdown__item-controls">
             <button
-              class="dropdown__item-minus dropdown__btn"
+              className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="babies"
             >
               -
             </button>
             <input
-              class="dropdown__item-input"
+              className="dropdown__item-input"
               type="number"
               value="0"
               id="babiesCounter"
             />
             <button
-              class="dropdown__item-plus dropdown__btn"
+              className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="babies"
             >
@@ -84,11 +95,11 @@ function dropDown() {
             </button>
           </div>
         </li>
-        <div class="dropdown__buttons">
-          <button class="dropdown__button btn-reset">
+        <div className="dropdown__buttons">
+          <button className="dropdown__button btn-reset">
             <span>удалить</span>
           </button>
-          <button class="dropdown__button btn-reset">
+          <button className="dropdown__button btn-reset">
             <span>применить</span>
           </button>
         </div>
@@ -96,3 +107,5 @@ function dropDown() {
     </div>
   );
 }
+
+export default Dropdown;
