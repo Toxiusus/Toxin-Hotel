@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ArrowDown from "../../assets/img/arrow-down.svg"
+import ArrowDown from "../../assets/img/arrow-down.svg";
 
 import "./Dropdown.scss";
 
@@ -8,17 +8,26 @@ function Dropdown() {
   const [adult, setAdult] = useState(0);
   const [children, setChildren] = useState(0);
   const [babies, setBabies] = useState(0);
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleActive = () => {
+    setIsActive((prevState) => !prevState);
+  };
 
   return (
     <div className="dropdown">
       <h3>гости</h3>
-      <div className="dropdown__select">
+      <div className="dropdown__select" onClick={toggleActive}>
         <span className="dropdown__selected">Сколько гостей</span>
         <div className="dropdown__caret">
           <img src={ArrowDown} alt="arrow-down" />
         </div>
       </div>
-      <ul className="dropdown__menu list-reset">
+      <ul
+        className={`dropdown__menu list-reset ${
+          isActive ? "dropdown__menu-open" : ""
+        }`}
+      >
         <li className="dropdown__item">
           <p className="dropdown__item-text">взрослые</p>
           <div className="dropdown__item-controls">
@@ -50,7 +59,9 @@ function Dropdown() {
           <p className="dropdown__item-text">дети</p>
           <div className="dropdown__item-controls">
             <button
-              onClick={() => setChildren(children > 0 ? children - 1 : children)}
+              onClick={() =>
+                setChildren(children > 0 ? children - 1 : children)
+              }
               className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="children"
