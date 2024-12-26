@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
+import ArrowDown from "../../assets/img/arrow-down.svg"
+
 import "./Dropdown.scss";
 
 function Dropdown() {
   const [adult, setAdult] = useState(0);
-
-  const clickMinus = () => {
-    setAdult(adult -1)
-  }
+  const [children, setChildren] = useState(0);
+  const [babies, setBabies] = useState(0);
 
   return (
     <div className="dropdown">
@@ -15,7 +15,7 @@ function Dropdown() {
       <div className="dropdown__select">
         <span className="dropdown__selected">Сколько гостей</span>
         <div className="dropdown__caret">
-          <img src="/img/arrow-down.e85954bc.svg" alt="arrow-down" />
+          <img src={ArrowDown} alt="arrow-down" />
         </div>
       </div>
       <ul className="dropdown__menu list-reset">
@@ -23,7 +23,7 @@ function Dropdown() {
           <p className="dropdown__item-text">взрослые</p>
           <div className="dropdown__item-controls">
             <button
-              onClick={clickMinus}
+              onClick={() => setAdult(adult > 0 ? adult - 1 : adult)}
               className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="adult"
@@ -37,6 +37,7 @@ function Dropdown() {
               id="adultCounter"
             />
             <button
+              onClick={() => setAdult(adult + 1)}
               className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="adult"
@@ -49,6 +50,7 @@ function Dropdown() {
           <p className="dropdown__item-text">дети</p>
           <div className="dropdown__item-controls">
             <button
+              onClick={() => setChildren(children > 0 ? children - 1 : children)}
               className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="children"
@@ -58,10 +60,11 @@ function Dropdown() {
             <input
               className="dropdown__item-input"
               type="number"
-              value="0"
+              value={children}
               id="childrenCounter"
             />
             <button
+              onClick={() => setChildren(children + 1)}
               className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="children"
@@ -74,6 +77,7 @@ function Dropdown() {
           <p className="dropdown__item-text">младенцы</p>
           <div className="dropdown__item-controls">
             <button
+              onClick={() => setBabies(babies > 0 ? babies - 1 : babies)}
               className="dropdown__item-minus dropdown__btn"
               id="minus"
               data-target="babies"
@@ -83,10 +87,11 @@ function Dropdown() {
             <input
               className="dropdown__item-input"
               type="number"
-              value="0"
+              value={babies}
               id="babiesCounter"
             />
             <button
+              onClick={() => setBabies(babies + 1)}
               className="dropdown__item-plus dropdown__btn"
               id="plus"
               data-target="babies"

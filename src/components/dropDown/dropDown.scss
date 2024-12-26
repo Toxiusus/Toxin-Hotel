@@ -1,7 +1,7 @@
 .dropdown__select {
     position: relative;
     padding: 13px 15px;
-    width: 100%;
+    width: 320px;
     height: 44px;
     display: flex;
     justify-content: space-between;
@@ -18,9 +18,9 @@
   .dropdown__menu {
     z-index: 100;
     position: absolute;
-    width: 100%;
+    width: 320px;
     // opacity: 0;
-    padding: 13px 15px;
+    padding: 13px 15px !important;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     background: rgb(255, 255, 255);
