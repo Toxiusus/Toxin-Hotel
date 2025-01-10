@@ -1,5 +1,4 @@
 .dropdown__select {
-  position: relative;
   padding: 13px 15px;
   width: 320px;
   height: 44px;
@@ -11,6 +10,11 @@
   background: rgb(255, 255, 255);
 }
 
+.dropdown__title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
 .dropdown__caret-rotate {
   transform: rotate(180deg);
 }
@@ -19,15 +23,10 @@
   z-index: 100;
   position: absolute;
   width: 320px;
-  opacity: 0;
   padding: 13px 15px !important;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
+  border-radius: 0 0 4px 4px;
   background: rgb(255, 255, 255);
-}
-
-.dropdown__menu-open {
-  opacity: 1;
 }
 
 .dropdown__item {
@@ -65,16 +64,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .dropdown__btn {
-  width: 30px; /* Ширина кружка */
-  height: 30px; /* Высота кружка */
-  background-color: transparent; /* Цвет фона */
-  border-radius: 50%; /* Закругление углов, чтобы получился кружок */
-  display: flex; /* Используем flexbox для центрирования содержимого */
-  align-items: center; /* Вертикальное центрирование */
-  justify-content: center; /* Горизонтальное центрирование */
-  font-size: 18px; /* Размер шрифта для знака минус */
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
   color: rgba(31, 32, 65, 0.5);
-  border-color: rgba(31, 32, 65, 0.5);
+  border: 1px solid rgba(31, 32, 65, 0.25);
 }
 
 .dropdown__buttons {

@@ -1,0 +1,29 @@
+.large {
+  position: relative;
+  width: 320px !important;
+  margin-top: 31px;
+  padding: 15px 22px !important;
+  border-radius: 22px;
+  background: linear-gradient(
+    180deg,
+    rgb(188, 156, 255),
+    rgb(139, 164, 249) 100%
+  ) !important;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.large::after{
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  right: 14px;
+  background-image: url('../../assets/img/arrow-right-white.svg');
+  background-repeat: no-repeat;
+}

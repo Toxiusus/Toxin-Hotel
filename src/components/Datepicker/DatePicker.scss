@@ -1,0 +1,140 @@
+.datepicker {
+  margin-bottom: 20px;
+}
+
+.datepicker__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.datepicker__maintitle {
+  margin-bottom: 22px;
+}
+
+.datepicker__input {
+  width: 150px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding: 11px 15px;
+}
+
+.datepicker__input-arrow {
+  position: relative;
+}
+
+.datepicker__input-arrow::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/img/arrow-down.svg");
+  right: 15px;
+  top: 44%;
+  width: 14px;
+  height: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.datepicker__status {
+  display: flex;
+  gap: 95px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.datepicker__box {
+  background-color: #fff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  margin-top: 5px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.datepicker__navigation {
+  padding: 20px 20px 44px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.datepicker__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(31, 32, 65);
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: center;
+}
+
+.datepicker__year {
+  padding-left: 3px;
+}
+
+.datepicker__daysnames {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  color: rgb(188, 156, 255);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+}
+
+.datepicker__dates {
+  padding: 12px 20px 0 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.datepicker__day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(31, 32, 65, 0.5);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+}
+
+.datepicker__day:hover {
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+}
+
+.selected {
+  background: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.datepicker__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datepicker__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.datepicker__buttons span {
+  color: rgb(188, 156, 255);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: left;
+  text-transform: uppercase;
+}

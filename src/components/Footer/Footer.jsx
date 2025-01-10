@@ -90,7 +90,7 @@ function Footer() {
         </ul>
       </div>
       <div className="footer__subscribe">
-        <h3 className="footer__title">навигация</h3>
+        <h3 className="footer__title">подписка</h3>
         <p className="footer__subscribe-text">
           Получайте специальные предложения и новости сервиса
         </p>

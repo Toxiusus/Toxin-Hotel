@@ -2,9 +2,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+html {
   background-color: #fff;
   color: rgba(31, 32, 65, 0.75);
   font-family: Montserrat;
@@ -51,7 +53,6 @@ h2 {
   font-size: 19px;
   font-weight: 700;
   line-height: 23px;
-  text-transform: uppercase;
 }
 h3 {
   margin: 0;
@@ -60,7 +61,6 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   line-height: 15px;
-  text-transform: uppercase;
 }
 
 ul {
@@ -89,7 +89,7 @@ form {
   background: rgb(255, 255, 255);
 }
 
-input{
+input {
   border: none;
   outline: none;
 }

@@ -1,4 +1,7 @@
+import arrow from "../../assets/img/arrow-down.svg";
 import Logo from "../../assets/img/Logo.svg";
+import EnterButton from "../EnterButton/EnterButton";
+import RegistrationButton from "../RegistrationButton/RegistrationButton";
 import "./Header.scss";
 
 function Header() {
@@ -18,6 +21,11 @@ function Header() {
             <li className="header__item">
               <a className="header__link" href="#">
                 Услуги
+                <img
+                  className="header__link-img"
+                  src={arrow}
+                  alt="arrow-down"
+                />
               </a>
             </li>
             <li className="header__item">
@@ -33,19 +41,17 @@ function Header() {
             <li className="header__item">
               <a className="header__link" href="#">
                 Соглашения
+                <img
+                  className="header__link-img"
+                  src={arrow}
+                  alt="arrow-down"
+                />
               </a>
             </li>
           </ul>
           <div className="header__buttons">
-            <button className="header__button header__enter" aria-label="enter">
-              <span>Войти</span>
-            </button>
-            <button
-              className="header__button header__registration"
-              aria-label="registration"
-            >
-              <span>Зарегистрироваться</span>
-            </button>
+            <EnterButton />
+            <RegistrationButton />
           </div>
         </div>
       </div>
