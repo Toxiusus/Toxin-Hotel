@@ -1,5 +1,5 @@
 import "./SearchRoom.scss";
-import room from "../../assets/img/room-0.jpg";
+import room from "../../assets/img/room-0.jpeg";
 
 function SearchRoom() {
   return (
@@ -11,7 +11,9 @@ function SearchRoom() {
             <li className="cards__items">
               <div className="cards__item">
                 <div className="cards__item-img">
-                  <img src={room} alt="room-0" />
+                  <a href="/">
+                    <img src={room} alt="room-0" />
+                  </a>
                 </div>
               </div>
             </li>
