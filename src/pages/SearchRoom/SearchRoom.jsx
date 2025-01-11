@@ -16,11 +16,11 @@ function SearchRoom() {
             <li className="cards__items">
               <div className="cards__item">
                 <div className="cards__item-img">
-                  <a href="/">
-                    <button>prev</button>
+                  <button>prev</button>
+                  <a href="#">
                     <img src={roomFirst} alt="room-0" />
-                    <button>next</button>
                   </a>
+                  <button>next</button>
                 </div>
               </div>
             </li>
