@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import roomFirst from "../../assets/img/room-0.jpeg";
 import roomSecond from "../../assets/img/room-1.jpeg";
 import roomThird from "../../assets/img/room-2.jpeg";
+import StarRating from "../StarRating/StarRating";
+
+import "./RoomCard.scss";
 
 function RoomCard() {
   const images = [roomFirst, roomSecond, roomThird];
@@ -22,33 +25,37 @@ function RoomCard() {
   return (
     <div className="card">
       <div className="card__slider">
-        <button className="prev-btn" onClick={prevImage}>
+        <button className="prev-btn card__slider-btn" onClick={prevImage}>
           prev
         </button>
         <a href="#">
-          <img src={images[currentIndex]} alt={`Room ${currentIndex}`} />
+          <img
+            src={images[currentIndex]}
+            alt={`Room ${currentIndex}`}
+            className="card__slider-img"
+          />
         </a>
-        <button className="next-btn" onClick={nextImage}>
+        <button className="next-btn card__slider-btn" onClick={nextImage}>
           next
         </button>
       </div>
       <div className="card__info">
         <div className="card__data">
           <div className="card__number">
-            <span>№</span>
-            <span>888</span>
-            <span>люкс</span>
+            <span className="card__number-symbol">№</span>
+            <span className="card__number-value">888</span>
+            <span className="card__number-text">люкс</span>
           </div>
           <div className="card__price">
-            <span>9990₽</span>
-            <span>в сутки</span>
+            <span className="card__price-value">9990₽</span>
+            <span className="card__price-text">в сутки</span>
           </div>
         </div>
         <div className="card__rating">
-          <div className="rating"></div>
+          <StarRating />
           <div className="comments">
-            <span>145</span>
-            <span>Отзывов</span>
+            <span className="comments__value">145</span>
+            <span className="comments__text">Отзывов</span>
           </div>
         </div>
       </div>

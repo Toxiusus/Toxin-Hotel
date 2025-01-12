@@ -1,0 +1,13 @@
+.star-rating {
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: rgb(188, 156, 255);
+}
+
+.star:hover {
+  color: rgb(188, 156, 255);
+}

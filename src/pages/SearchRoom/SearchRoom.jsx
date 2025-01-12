@@ -8,7 +8,7 @@ function SearchRoom() {
         <aside></aside>
         <div className="room__selection">
           <div className="cards">
-            <RoomCard />
+            <RoomCard/>
           </div>
         </div>
       </div>

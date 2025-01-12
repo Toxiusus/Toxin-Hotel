@@ -8,3 +8,8 @@
     padding: 70px 0 0 140px;
   }
 }
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,270px);
+}
