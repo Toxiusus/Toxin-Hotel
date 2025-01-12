@@ -1,12 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./SearchRoom.scss";
 import roomFirst from "../../assets/img/room-0.jpeg";
+import roomSecond from "../../assets/img/room-1.jpeg";
+import roomThird from "../../assets/img/room-2.jpeg";
 
 function SearchRoom() {
-  const [image, setImage] = useState();
+  const images = [roomFirst, roomSecond, roomThird];
 
-  const images = [roomFirst];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const prevImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+  
   return (
     <section className="room">
       <div className="room__container container">
@@ -16,11 +26,15 @@ function SearchRoom() {
             <li className="cards__items">
               <div className="cards__item">
                 <div className="cards__item-img">
-                  <button>prev</button>
+                  <button className="prev-btn" onClick={prevImage}>
+                    prev
+                  </button>
                   <a href="#">
-                    <img src={roomFirst} alt="room-0" />
+                    <img src={images[currentIndex]} alt={`Room ${currentIndex}`} />
                   </a>
-                  <button>next</button>
+                  <button className="next-btn" onClick={nextImage}>
+                    next
+                  </button>
                 </div>
               </div>
             </li>
