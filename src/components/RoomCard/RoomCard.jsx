@@ -44,6 +44,13 @@ function RoomCard() {
             <span>в сутки</span>
           </div>
         </div>
+        <div className="card__rating">
+          <div className="rating"></div>
+          <div className="comments">
+            <span>145</span>
+            <span>Отзывов</span>
+          </div>
+        </div>
       </div>
     </div>
   );
