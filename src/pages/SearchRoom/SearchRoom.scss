@@ -1,15 +1,19 @@
 .room {
   &__container {
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1440px;
-    min-width: 320px;
-    padding: 70px 0 0 140px;
+    justify-content: space-between;
+    margin: 0 auto 60px;
+    max-width: 1160px;
+  }
+
+  &__selection-title {
+    padding-bottom: 21px;
   }
 }
 
-.cards{
+.cards {
   display: grid;
-  grid-template-columns: repeat(3,270px);
+  grid-template-columns: repeat(3, 270px);
+  gap: 21px 12px;
+  padding-bottom: 41px;
 }
