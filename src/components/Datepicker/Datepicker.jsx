@@ -61,36 +61,64 @@ const DatePicker = () => {
     }
   };
 
+  const isLanding = window.location.pathname === "/";
+  console.log(isLanding);
+
   return (
     <div className="datepicker">
       <div className="datepicker__container">
-        <h1 className="datepicker__maintitle">
-          Найдём номера под ваши пожелания
-        </h1>
+        {isLanding && (
+          <>
+            <h1 className="datepicker__maintitle">
+              Найдём номера под ваши пожелания
+            </h1>
+          </>
+        )}
         <div className="datepicker__status">
-          <h3>Прибытие</h3>
-          <h3>Выезд</h3>
+          {isLanding && (
+            <>
+              <h3>Прибытие</h3>
+              <h3>Выезд</h3>
+            </>
+          )}
         </div>
         <div className="datepicker__inputs">
-          <input
-            onClick={() => setOpen(!open)}
-            className="datepicker__input"
-            type="text"
-            value={formatDate(startDate)}
-            placeholder="ДД.ММ.ГГГГ"
-            readOnly
-          />
-          <div className="datepicker__input-arrow"></div>
-          <input
-            onClick={() => setOpen(!open)}
-            className="datepicker__input"
-            type="text"
-            value={formatDate(endDate)}
-            placeholder="ДД.ММ.ГГГГ"
-            readOnly
-          />
-          <div className="datepicker__input-arrow">
-          </div>
+          {isLanding && (
+            <>
+              <div className="datepicker__inputs-arrow">
+                <input
+                  onClick={() => setOpen(!open)}
+                  className="datepicker__input"
+                  type="text"
+                  value={formatDate(startDate)}
+                  placeholder="ДД.ММ.ГГГГ"
+                  readOnly
+                />
+              </div>
+              <div className="datepicker__inputs-arrow">
+                <input
+                  onClick={() => setOpen(!open)}
+                  className="datepicker__input"
+                  type="text"
+                  value={formatDate(endDate)}
+                  placeholder="ДД.ММ.ГГГГ"
+                  readOnly
+                />
+              </div>
+            </>
+          )}
+          {!isLanding && (
+            <div className="datepicker__inputs-arrow">
+              <input
+                onClick={() => setOpen(!open)}
+                className="datepicker__input"
+                type="text"
+                value={formatDate(startDate)}
+                placeholder="ДД.ММ.ГГГГ"
+                readOnly
+              />
+            </div>
+          )}
         </div>
         {open && (
           <div className="datepicker__box">

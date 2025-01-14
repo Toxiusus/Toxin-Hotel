@@ -1,3 +1,4 @@
+import DatePicker from "../../components/DatePicker/DatePicker";
 import RoomCard from "../../components/RoomCard/RoomCard";
 import "./SearchRoom.scss";
 
@@ -5,11 +6,13 @@ function SearchRoom() {
   return (
     <section className="room">
       <div className="room__container">
-        <aside>
-          <a href="#">pisapopa</a>
+        <aside className="room__aside">
+          <DatePicker />
         </aside>
         <div className="room__selection">
-          <h1 className="room__selection-title">Номера, которые мы для вас подобрали</h1>
+          <h1 className="room__selection-title">
+            Номера, которые мы для вас подобрали
+          </h1>
           <div className="cards">
             <RoomCard
               img={0}

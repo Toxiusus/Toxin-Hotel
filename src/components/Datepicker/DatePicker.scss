@@ -11,28 +11,28 @@
   margin-bottom: 22px;
 }
 
+.datepicker__inputs-arrow {
+  position: relative;
+}
+
+.datepicker__inputs-arrow::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/img/arrow-down.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  // transform: translateY(17px);
+  top: 43%;
+  transform: translateX(-20px);
+}
+
 .datepicker__input {
   width: 150px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   padding: 11px 15px;
-}
-
-.datepicker__input-arrow {
-  position: relative;
-}
-
-.datepicker__input-arrow::after {
-  position: absolute;
-  content: "";
-  background-image: url("../../assets/img/arrow-down.svg");
-  right: 15px;
-  top: 44%;
-  width: 14px;
-  height: 10px;
-  background-repeat: no-repeat;
-  cursor: pointer;
 }
 
 .datepicker__status {
