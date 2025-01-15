@@ -1,13 +1,18 @@
 .room {
   &__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto 60px;
     max-width: 1160px;
+    padding-top: 30px;
   }
 
   &__selection-title {
     padding-bottom: 21px;
+  }
+
+  &__title {
+    text-transform: uppercase;
   }
 }
 
@@ -16,4 +21,8 @@
   grid-template-columns: repeat(3, 270px);
   gap: 21px 12px;
   padding-bottom: 41px;
+}
+
+.room__aside {
+  max-width: 266px;
 }

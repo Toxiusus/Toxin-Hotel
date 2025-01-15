@@ -11,8 +11,8 @@ const DatePicker = () => {
   const [open, setOpen] = useState(false);
 
   const handleRemoveClick = () => {
-    setStartDate("");
-    setEndDate("");
+    setStartDate(null);
+    setEndDate(null);
   };
 
   const monthNames = [
@@ -62,7 +62,11 @@ const DatePicker = () => {
   };
 
   const isLanding = window.location.pathname === "/";
-  console.log(isLanding);
+
+  // Форматируем диапазон дат для отображения в input
+  const formattedDateRange = startDate && endDate
+    ? `${formatDate(startDate)} - ${formatDate(endDate)}`
+    : formatDate(startDate);
 
   return (
     <div className="datepicker">
@@ -82,32 +86,8 @@ const DatePicker = () => {
             </>
           )}
         </div>
-        <div className="datepicker__inputs">
-          {isLanding && (
-            <>
-              <div className="datepicker__inputs-arrow">
-                <input
-                  onClick={() => setOpen(!open)}
-                  className="datepicker__input"
-                  type="text"
-                  value={formatDate(startDate)}
-                  placeholder="ДД.ММ.ГГГГ"
-                  readOnly
-                />
-              </div>
-              <div className="datepicker__inputs-arrow">
-                <input
-                  onClick={() => setOpen(!open)}
-                  className="datepicker__input"
-                  type="text"
-                  value={formatDate(endDate)}
-                  placeholder="ДД.ММ.ГГГГ"
-                  readOnly
-                />
-              </div>
-            </>
-          )}
-          {!isLanding && (
+        {isLanding && (
+          <div className="datepicker__inputs">
             <div className="datepicker__inputs-arrow">
               <input
                 onClick={() => setOpen(!open)}
@@ -118,8 +98,30 @@ const DatePicker = () => {
                 readOnly
               />
             </div>
-          )}
-        </div>
+            <div className="datepicker__inputs-arrow">
+              <input
+                onClick={() => setOpen(!open)}
+                className="datepicker__input"
+                type="text"
+                value={formatDate(endDate)}
+                placeholder="ДД.ММ.ГГГГ"
+                readOnly
+              />
+            </div>
+          </div>
+        )}
+        {!isLanding && (
+          <div className="datepicker__inputs-arrow">
+            <input
+              onClick={() => setOpen(!open)}
+              className="datepicker__input"
+              type="text"
+              value={formattedDateRange}  // Показываем диапазон дат
+              placeholder="ДД.ММ.ГГГГ - ДД.ММ.ГГГГ"
+              readOnly
+            />
+          </div>
+        )}
         {open && (
           <div className="datepicker__box">
             <div className="datepicker__navigation">
@@ -137,7 +139,7 @@ const DatePicker = () => {
                 className="datepicker__next btn-reset datepicker__btn"
                 onClick={() => setMonth((prev) => (prev === 11 ? 0 : prev + 1))}
               >
-                <img src={next} alt="prev" />
+                <img src={next} alt="next" />
               </button>
             </div>
             <div className="datepicker__daysnames">

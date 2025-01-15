@@ -1,4 +1,5 @@
 import DatePicker from "../../components/DatePicker/DatePicker";
+import Dropdown from "../../components/Dropdown/Dropdown";
 import RoomCard from "../../components/RoomCard/RoomCard";
 import "./SearchRoom.scss";
 
@@ -7,7 +8,9 @@ function SearchRoom() {
     <section className="room">
       <div className="room__container">
         <aside className="room__aside">
+          <h3 className="room__title">даты пребывания в отеле</h3>
           <DatePicker />
+          <Dropdown />
         </aside>
         <div className="room__selection">
           <h1 className="room__selection-title">
