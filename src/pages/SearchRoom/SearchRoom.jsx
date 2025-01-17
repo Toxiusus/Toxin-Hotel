@@ -1,5 +1,6 @@
 import DatePicker from "../../components/DatePicker/DatePicker";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import PriceRangeSlider from "../../components/PriceRangeSlider/PriceRangeSlider";
 import RoomCard from "../../components/RoomCard/RoomCard";
 import "./SearchRoom.scss";
 
@@ -11,6 +12,7 @@ function SearchRoom() {
           <h3 className="room__title">даты пребывания в отеле</h3>
           <DatePicker />
           <Dropdown />
+          <PriceRangeSlider min={5000} max={13000} step={100} />
         </aside>
         <div className="room__selection">
           <h1 className="room__selection-title">
