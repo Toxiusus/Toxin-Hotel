@@ -1,3 +1,4 @@
+import Checkbox from "../../components/Checkbox/Checkbox";
 import DatePicker from "../../components/DatePicker/DatePicker";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import PriceRangeSlider from "../../components/PriceRangeSlider/PriceRangeSlider";
@@ -13,6 +14,19 @@ function SearchRoom() {
           <DatePicker />
           <Dropdown />
           <PriceRangeSlider min={5000} max={13000} step={100} />
+          <h3 className="room__title room__title-checkbox">правила дома</h3>
+          <Checkbox text="Можно курить" />
+          <Checkbox text="Можно с питомцами" />
+          <Checkbox text="Можно пригласить гостей (до 10 человек)" />
+          <h3 className="room__title room__title-checkbox">доступность</h3>
+          <Checkbox
+            toptext="Широкий коридор"
+            text="Ширина коридоров в номере не менее 91 см."
+          />
+          <Checkbox
+            toptext="Помощник для инвалидов"
+            text="На 1 этаже вас встретит специалист  и проводит до номера."
+          />
         </aside>
         <div className="room__selection">
           <h1 className="room__selection-title">
