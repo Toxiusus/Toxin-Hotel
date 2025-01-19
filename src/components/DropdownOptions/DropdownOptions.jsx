@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import ArrowDown from "../../assets/img/arrow-down.svg";
 
-import "./Dropdown.scss";
+import "../Dropdown/Dropdown.scss";
 
-function Dropdown() {
+function DropdownOptions() {
   const [adult, setAdult] = useState(0);
   const [children, setChildren] = useState(0);
   const [babies, setBabies] = useState(0);
@@ -13,10 +13,9 @@ function Dropdown() {
   const totalGuests = adult + children + babies;
 
   const guestsCounter = (guests) => {
-    if (guests === 0) return "Сколько гостей";
-    if (guests === 1) return `${guests} гость`;
-    if (guests > 1 && guests < 5) return `${guests} гостя`;
-    return `${guests} гостей`;
+    if (adult === 1) return `${guests} спальня`;
+    if (adult > 1) return `${guests} спальни`;
+    if (children === 1) return `${guests} кровать`;
   };
 
   const handleRemoveClick = () => {
@@ -32,7 +31,7 @@ function Dropdown() {
         <input
           type="text"
           className="dropdown__selected"
-          placeholder="Сколько гостей"
+          placeholder="удобства"
           value={guestsCounter(totalGuests)}
           readOnly
         />
@@ -43,7 +42,7 @@ function Dropdown() {
       {isActive && (
         <ul className={"dropdown__menu list-reset"}>
           <li className="dropdown__item">
-            <p className="dropdown__item-text">взрослые</p>
+            <p className="dropdown__item-text">спальни</p>
             <div className="dropdown__item-controls">
               <button
                 onClick={() => setAdult(adult > 0 ? adult - 1 : adult)}
@@ -70,7 +69,7 @@ function Dropdown() {
             </div>
           </li>
           <li className="dropdown__item">
-            <p className="dropdown__item-text">дети</p>
+            <p className="dropdown__item-text">кровати</p>
             <div className="dropdown__item-controls">
               <button
                 onClick={() =>
@@ -99,7 +98,7 @@ function Dropdown() {
             </div>
           </li>
           <li className="dropdown__item">
-            <p className="dropdown__item-text">младенцы</p>
+            <p className="dropdown__item-text">ванные комнаты</p>
             <div className="dropdown__item-controls">
               <button
                 onClick={() => setBabies(babies > 0 ? babies - 1 : babies)}
@@ -145,4 +144,4 @@ function Dropdown() {
   );
 }
 
-export default Dropdown;
+export default DropdownOptions;
