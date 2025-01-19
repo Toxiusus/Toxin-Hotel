@@ -1,6 +1,7 @@
 import Checkbox from "../../components/Checkbox/Checkbox";
 import DatePicker from "../../components/DatePicker/DatePicker";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import DropdownCheckbox from "../../components/DropdownCheckbox/DropdownCheckbox";
 import DropdownOptions from "../../components/DropdownOptions/DropdownOptions";
 import PriceRangeSlider from "../../components/PriceRangeSlider/PriceRangeSlider";
 import RoomCard from "../../components/RoomCard/RoomCard";
@@ -29,6 +30,7 @@ function SearchRoom() {
             text="На 1 этаже вас встретит специалист  и проводит до номера."
           />
           <DropdownOptions/>
+          <DropdownCheckbox/>
         </aside>
         <div className="room__selection">
           <h1 className="room__selection-title">
