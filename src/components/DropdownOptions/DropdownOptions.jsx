@@ -37,7 +37,7 @@ function DropdownOptions() {
   };
 
   return (
-    <div className="dropdown">
+    <div className="dropdown dropdown-options">
       <h3 className="dropdown__title">удобства номера</h3>
       <div className="dropdown__select" onClick={() => setIsActive(!isActive)}>
         <input
