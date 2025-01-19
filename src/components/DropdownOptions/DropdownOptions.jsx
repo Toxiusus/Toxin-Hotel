@@ -12,10 +12,22 @@ function DropdownOptions() {
 
   const totalGuests = adult + children + babies;
 
-  const guestsCounter = (guests) => {
-    if (adult === 1) return `${guests} спальня`;
-    if (adult > 1) return `${guests} спальни`;
-    if (children === 1) return `${guests} кровать`;
+  const guestsCounter = () => {
+    let result = "";
+
+    if (adult > 0) {
+      result += `${adult} спа${adult === 1 ? "льня" : "льни"}`;
+    }
+    if (children > 0) {
+      if (result) result += ", ";
+      result += `${children} крова${children === 1 ? "ть" : "ти"}`;
+    }
+    if (babies > 0) {
+      if (result) result += ", ";
+      result += `${babies} ${babies === 1 ? "ванная комната" : "ванные комнаты"}`;
+    }
+
+    return result || "удобства";
   };
 
   const handleRemoveClick = () => {
