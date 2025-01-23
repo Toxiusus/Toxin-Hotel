@@ -1,13 +1,24 @@
+import React, { useState } from "react";
+
 import Checkbox from "../../components/Checkbox/Checkbox";
 import DatePicker from "../../components/DatePicker/DatePicker";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import DropdownCheckbox from "../../components/DropdownCheckbox/DropdownCheckbox";
 import DropdownOptions from "../../components/DropdownOptions/DropdownOptions";
+import Pagination from "../../components/Pagination/Pagination";
 import PriceRangeSlider from "../../components/PriceRangeSlider/PriceRangeSlider";
 import RoomCard from "../../components/RoomCard/RoomCard";
 import "./SearchRoom.scss";
 
 function SearchRoom() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 15;
+
+  const handlePageChange = (page) => {
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
   return (
     <section className="room">
       <div className="room__container">
@@ -29,8 +40,8 @@ function SearchRoom() {
             toptext="Помощник для инвалидов"
             text="На 1 этаже вас встретит специалист  и проводит до номера."
           />
-          <DropdownOptions/>
-          <DropdownCheckbox/>
+          <DropdownOptions />
+          <DropdownCheckbox />
         </aside>
         <div className="room__selection">
           <h1 className="room__selection-title">
@@ -57,6 +68,11 @@ function SearchRoom() {
             <RoomCard img={11} number="352" price="5 000" comments="55" />
           </div>
         </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
       </div>
     </section>
   );
