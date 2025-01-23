@@ -16,7 +16,7 @@ import StarRating from "../StarRating/StarRating";
 
 import "./RoomCard.scss";
 
-function RoomCard({img,number,lux,price,comments}) {
+function RoomCard({ img, number, lux, price, comments }) {
   const images = [
     roomFirst,
     roomSecond,
@@ -51,7 +51,7 @@ function RoomCard({img,number,lux,price,comments}) {
           className="prev-btn card__slider-btn btn-reset"
           onClick={prevImage}
         ></button>
-        <a href="#">
+        <a href="/room-details">
           <img
             src={images[currentIndex]}
             alt={`Room ${currentIndex}`}

@@ -6,6 +6,7 @@ import Landing from "./pages/Landing/Landing";
 import SearchRoom from "./pages/SearchRoom/SearchRoom";
 
 import "./scss/all.scss";
+import RoomDetails from "./pages/RoomDetails/RoomDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/search-room" element={<SearchRoom />} />
+            <Route path="/room-details" element={<RoomDetails />} />
           </Routes>
         </div>
         <Footer />
