@@ -1,10 +1,65 @@
-.room-details__photo{
-    display: flex;
-    max-height: 485px;
+.room-details__photo {
+  display: flex;
+  max-height: 485px;
 
-    img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.room-details__information {
+  grid-gap: 12px 70px;
+  display: grid;
+  grid-template-columns: 291px 1fr;
+  padding-bottom: 71px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-details__photo-top {
+  height: 242px;
+}
+
+.room-details__photo-bottom {
+  height: 242px;
+}
+
+.room-details__container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 400px;
+  padding: 70px 140px 0;
+}
+
+.dignities__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0 16px;
+}
+
+.dignities__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.dignities__description-title {
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.dignities__description-subtitle {
+  line-height: 24px;
+}
+
+.dignities__border {
+  background-color: rgba(31, 32, 65, 0.1);
+  border: none;
+  color: rgba(31, 32, 65, 0.1);
+  height: 1px;
 }
