@@ -88,10 +88,10 @@ function RoomDetails() {
                 </div>
                 <div className="chart__grade">
                   <ul className="chart__grade-list list-reset">
-                    <li className="chart__grade-item">Великолепно</li>
-                    <li className="chart__grade-item">Хорошо</li>
-                    <li className="chart__grade-item">Удовлетворительно</li>
-                    <li className="chart__grade-item">Разочарован</li>
+                    <li className="chart__grade-item orange">Великолепно</li>
+                    <li className="chart__grade-item green">Хорошо</li>
+                    <li className="chart__grade-item purple">Удовлетворительно</li>
+                    <li className="chart__grade-item black">Разочарован</li>
                   </ul>
                 </div>
               </div>
