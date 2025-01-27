@@ -63,3 +63,29 @@
   color: rgba(31, 32, 65, 0.1);
   height: 1px;
 }
+
+.chart {
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+
+  &__grade {
+    padding-top: 35px;
+
+    &-item {
+      position: relative;
+      line-height: 24px;
+    }
+
+    &-item::before {
+      border-radius: 8px;
+      content: "";
+      height: 10px;
+      left: -15px;
+      position: absolute;
+      top: 7px;
+      width: 10px;
+      background: -webkit-linear-gradient(top, rgb(255, 227, 156), rgb(255, 186, 156));
+    }
+  }
+}

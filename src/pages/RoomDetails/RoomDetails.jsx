@@ -6,6 +6,7 @@ import thirdthphoto from "../../assets/img/det-3.jpeg";
 import dignities1 from "../../assets/img/dignities-1.svg";
 import dignities2 from "../../assets/img/dignities-2.svg";
 import dignities3 from "../../assets/img/dignities-3.svg";
+import chart from "../../assets/img/chart.jpeg";
 
 function RoomDetails() {
   return (
@@ -80,6 +81,19 @@ function RoomDetails() {
             <section className="room-details__impressions">
               <div className="heading">
                 <h2 className="heading__title">Впечатления от номера</h2>
+              </div>
+              <div className="chart">
+                <div className="chart__img">
+                  <img src={chart} alt="chart" />
+                </div>
+                <div className="chart__grade">
+                  <ul className="chart__grade-list list-reset">
+                    <li className="chart__grade-item">Великолепно</li>
+                    <li className="chart__grade-item">Хорошо</li>
+                    <li className="chart__grade-item">Удовлетворительно</li>
+                    <li className="chart__grade-item">Разочарован</li>
+                  </ul>
+                </div>
               </div>
             </section>
           </div>
