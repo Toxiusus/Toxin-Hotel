@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import "./RoomDetails.scss";
 
 import firstphoto from "../../assets/img/det-1.jpeg";
@@ -7,8 +9,19 @@ import dignities1 from "../../assets/img/dignities-1.svg";
 import dignities2 from "../../assets/img/dignities-2.svg";
 import dignities3 from "../../assets/img/dignities-3.svg";
 import chart from "../../assets/img/chart.jpeg";
+import user from "../../assets/img/user-1.jpg";
+import user2 from "../../assets/img/user-2.jpg";
+import like from "../../assets/img/like.svg";
 
 function RoomDetails() {
+  const [liked, setLiked] = useState(false);
+  const [count, setCount] = useState(2);
+
+  const toggleLike = () => {
+    setLiked(!liked);
+    setCount(liked ? count - 1 : count + 1);
+  };
+
   return (
     <div className="room-details">
       <div className="room-details__photo container">
@@ -103,7 +116,64 @@ function RoomDetails() {
                 <h2 className="heading__title">Отзывы посетителей номера</h2>
                 <span className="heading__descr">2 отзыва</span>
               </div>
-              <div className="room-details__feedback"></div>
+              <div className="room-details__feedback-item">
+                <div className="comment">
+                  <div className="comment__header">
+                    <img className="comment__img" src={user} alt="user-1" />
+                    <div className="comment__descr">
+                      <div className="comment__name">Мурад Сарафанов</div>
+                      <div className="comment__date">5 дней назад</div>
+                    </div>
+                  </div>
+                  <div className="comment__bottom">
+                    <div className="comment__like">
+                      <button
+                        onClick={toggleLike}
+                        className="comment__btn btn-reset"
+                      >
+                        <img className="comment__like" src={like} alt="like" />
+                        <span className="ml-2 text-sm font-medium">
+                          {count}
+                        </span>
+                      </button>
+                    </div>
+                    <div className="comment__text">
+                      Великолепный матрас на кровати в основной спальне! А пуфик
+                      вообще потрясающий. И стены, действительно,
+                      шумоподавляющие. Выкрикивал комплименты повару — никто не
+                      жаловался из соседей
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="room-details__feedback-item">
+                <div className="comment">
+                  <div className="comment__header">
+                    <img className="comment__img" src={user2} alt="user-1" />
+                    <div className="comment__descr">
+                      <div className="comment__name">Патрисия Стёклышкова</div>
+                      <div className="comment__date">Неделю назад</div>
+                    </div>
+                  </div>
+                  <div className="comment__bottom">
+                    <div className="comment__like">
+                      <button
+                        onClick={toggleLike}
+                        className="btn-reset"
+                      >
+                        <span className="ml-2 text-sm font-medium">
+                          {count}
+                        </span>
+                      </button>
+                    </div>
+                    <div className="comment__text">
+                      Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в
+                      номер советую заказать, каждый день новое блюдо и десерт
+                      как комплимент
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
           </div>
         </div>
