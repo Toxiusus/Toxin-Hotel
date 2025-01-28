@@ -90,11 +90,20 @@ function RoomDetails() {
                   <ul className="chart__grade-list list-reset">
                     <li className="chart__grade-item orange">Великолепно</li>
                     <li className="chart__grade-item green">Хорошо</li>
-                    <li className="chart__grade-item purple">Удовлетворительно</li>
+                    <li className="chart__grade-item purple">
+                      Удовлетворительно
+                    </li>
                     <li className="chart__grade-item black">Разочарован</li>
                   </ul>
                 </div>
               </div>
+            </section>
+            <section className="room-details__feedback">
+              <div className="heading">
+                <h2 className="heading__title">Отзывы посетителей номера</h2>
+                <span className="heading__descr">2 отзыва</span>
+              </div>
+              <div className="room-details__feedback"></div>
             </section>
           </div>
         </div>
