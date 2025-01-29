@@ -14,12 +14,26 @@ import user2 from "../../assets/img/user-2.jpg";
 import like from "../../assets/img/like.svg";
 
 function RoomDetails() {
+  const [count, setCount] = useState(13);
+  const [secondCount, setSecondCount] = useState(2);
   const [liked, setLiked] = useState(false);
-  const [count, setCount] = useState(2);
 
   const toggleLike = () => {
+    if (liked) {
+      setCount(count - 1);
+    } else {
+      setCount(count + 1);
+    }
     setLiked(!liked);
-    setCount(liked ? count - 1 : count + 1);
+  };
+
+  const toggleSecondLike = () => {
+    if (liked) {
+      setSecondCount(secondCount - 1);
+    } else {
+      setSecondCount(secondCount + 1);
+    }
+    setLiked(!liked);
   };
 
   return (
@@ -132,9 +146,7 @@ function RoomDetails() {
                         className="comment__btn btn-reset"
                       >
                         <img className="comment__like" src={like} alt="like" />
-                        <span className="ml-2 text-sm font-medium">
-                          {count}
-                        </span>
+                        <span className="comment__count">{count}</span>
                       </button>
                     </div>
                     <div className="comment__text">
@@ -158,12 +170,11 @@ function RoomDetails() {
                   <div className="comment__bottom">
                     <div className="comment__like">
                       <button
-                        onClick={toggleLike}
-                        className="btn-reset"
+                        onClick={toggleSecondLike}
+                        className="comment__btn comment__btn-active btn-reset"
                       >
-                        <span className="ml-2 text-sm font-medium">
-                          {count}
-                        </span>
+                        <img className="comment__like" src={like} alt="like" />
+                        <span className="comment__count comment__count-active">{secondCount}</span>
                       </button>
                     </div>
                     <div className="comment__text">
