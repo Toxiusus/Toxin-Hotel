@@ -11,6 +11,7 @@ import dignities3 from "../../assets/img/dignities-3.svg";
 import chart from "../../assets/img/chart.jpeg";
 import user from "../../assets/img/user-1.jpg";
 import user2 from "../../assets/img/user-2.jpg";
+import dislike from "../../assets/img/dislike.svg";
 import like from "../../assets/img/like.svg";
 
 function RoomDetails() {
@@ -143,10 +144,12 @@ function RoomDetails() {
                     <div className="comment__like">
                       <button
                         onClick={toggleLike}
-                        className="comment__btn btn-reset"
+                        className="comment__btn comment__btn-active btn-reset"
                       >
                         <img className="comment__like" src={like} alt="like" />
-                        <span className="comment__count">{count}</span>
+                        <span className="comment__count comment__count-active">
+                          {count}
+                        </span>
                       </button>
                     </div>
                     <div className="comment__text">
@@ -171,10 +174,14 @@ function RoomDetails() {
                     <div className="comment__like">
                       <button
                         onClick={toggleSecondLike}
-                        className="comment__btn comment__btn-active btn-reset"
+                        className="comment__btn btn-reset"
                       >
-                        <img className="comment__like" src={like} alt="like" />
-                        <span className="comment__count comment__count-active">{secondCount}</span>
+                        <img
+                          className="comment__like"
+                          src={dislike}
+                          alt="dislike"
+                        />
+                        <span className="comment__count">{secondCount}</span>
                       </button>
                     </div>
                     <div className="comment__text">
@@ -184,6 +191,40 @@ function RoomDetails() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </section>
+            <section className="room-details__rules">
+              <div className="heading">
+                <h2 className="heading__title">Правила</h2>
+              </div>
+              <div className="room-details__rules-list">
+                <ul className="bullet-list list-reset">
+                  <li className="bullet-list__item">
+                    <p>Нельзя с питомцами</p>
+                  </li>
+                  <li className="bullet-list__item">
+                    <p>Без вечеринок и мероприятий</p>
+                  </li>
+                  <li className="bullet-list__item">
+                    <p>Время прибытия — после 13:00, а выезд до 12:00</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="heading">
+                <h2 className="heading__title">Правила</h2>
+              </div>
+              <div className="room-details__rules-list">
+                <ul className="bullet-list list-reset">
+                  <li className="bullet-list__item">
+                    <p>Нельзя с питомцами</p>
+                  </li>
+                  <li className="bullet-list__item">
+                    <p>Без вечеринок и мероприятий</p>
+                  </li>
+                  <li className="bullet-list__item">
+                    <p>Время прибытия — после 13:00, а выезд до 12:00</p>
+                  </li>
+                </ul>
               </div>
             </section>
           </div>
