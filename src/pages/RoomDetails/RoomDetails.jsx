@@ -194,37 +194,35 @@ function RoomDetails() {
               </div>
             </section>
             <section className="room-details__rules">
-              <div className="heading">
-                <h2 className="heading__title">Правила</h2>
+              <div className="room-details__rules-container">
+                <div className="heading">
+                  <h2 className="heading__title">Правила</h2>
+                </div>
+                <div className="room-details__rules-list">
+                  <ul className="bullet-list list-reset">
+                    <li className="bullet-list__item">
+                      <p className="bullet-list__item-text">Нельзя с питомцами</p>
+                    </li>
+                    <li className="bullet-list__item">
+                      <p>Без вечеринок и мероприятий</p>
+                    </li>
+                    <li className="bullet-list__item">
+                      <p>Время прибытия — после 13:00, а выезд до 12:00</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="room-details__rules-list">
-                <ul className="bullet-list list-reset">
-                  <li className="bullet-list__item">
-                    <p>Нельзя с питомцами</p>
-                  </li>
-                  <li className="bullet-list__item">
-                    <p>Без вечеринок и мероприятий</p>
-                  </li>
-                  <li className="bullet-list__item">
-                    <p>Время прибытия — после 13:00, а выезд до 12:00</p>
-                  </li>
-                </ul>
-              </div>
-              <div className="heading">
-                <h2 className="heading__title">Правила</h2>
-              </div>
-              <div className="room-details__rules-list">
-                <ul className="bullet-list list-reset">
-                  <li className="bullet-list__item">
-                    <p>Нельзя с питомцами</p>
-                  </li>
-                  <li className="bullet-list__item">
-                    <p>Без вечеринок и мероприятий</p>
-                  </li>
-                  <li className="bullet-list__item">
-                    <p>Время прибытия — после 13:00, а выезд до 12:00</p>
-                  </li>
-                </ul>
+              <div className="room-details__rules-container">
+                <div className="heading">
+                  <h2 className="heading__title">отмена</h2>
+                </div>
+                <div className="room-details__rules-text">
+                  <p>
+                    Бесплатная отмена в течение 48 ч. После этого при отмене не
+                    позднее чем за 5 дн. до прибытия вы получите полный возврат
+                    за вычетом сбора за услуги.
+                  </p>
+                </div>
               </div>
             </section>
           </div>
