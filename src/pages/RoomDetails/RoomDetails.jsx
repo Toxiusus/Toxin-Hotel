@@ -214,7 +214,7 @@ function RoomDetails() {
               </div>
               <div className="room-details__rules-container">
                 <div className="heading">
-                  <h2 className="heading__title">отмена</h2>
+                  <h2 className="heading__title">Отмена</h2>
                 </div>
                 <div className="room-details__rules-text">
                   <p>
