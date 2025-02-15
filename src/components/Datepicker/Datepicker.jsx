@@ -110,7 +110,7 @@ const DatePicker = () => {
             </div>
           </div>
         )}
-        {!isLanding && (
+        {!isLanding &&(
           <div className="datepicker__inputs-arrow">
             <input
               onClick={() => setOpen(!open)}

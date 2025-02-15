@@ -14,6 +14,10 @@ import user2 from "../../assets/img/user-2.jpg";
 import dislike from "../../assets/img/dislike.svg";
 import like from "../../assets/img/like.svg";
 
+import DatePicker from "../../components/DatePicker/DatePicker.jsx";
+import Dropdown from "../../components/Dropdown/Dropdown";
+import LargeButton from "../../components/LargeButton/LargeButton";
+
 function RoomDetails() {
   const [count, setCount] = useState(13);
   const [secondCount, setSecondCount] = useState(2);
@@ -226,6 +230,11 @@ function RoomDetails() {
               </div>
             </section>
           </div>
+        </div>
+        <div>
+          <DatePicker/>
+          <Dropdown />
+          <LargeButton />
         </div>
       </div>
     </div>
