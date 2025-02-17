@@ -62,11 +62,14 @@ const DatePicker = () => {
   };
 
   const isLanding = window.location.pathname === "/";
+  const isroomDetails = window.location.pathname === "/room-details";
+  const isSearchRoom = window.location.pathname === "/search-room";
 
   // Форматируем диапазон дат для отображения в input
-  const formattedDateRange = startDate && endDate
-    ? `${formatDate(startDate)} - ${formatDate(endDate)}`
-    : formatDate(startDate);
+  const formattedDateRange =
+    startDate && endDate
+      ? `${formatDate(startDate)} - ${formatDate(endDate)}`
+      : formatDate(startDate);
 
   return (
     <div className="datepicker">
@@ -86,7 +89,7 @@ const DatePicker = () => {
             </>
           )}
         </div>
-        {isLanding && (
+        {(isLanding || isroomDetails) && (
           <div className="datepicker__inputs">
             <div className="datepicker__inputs-arrow">
               <input
@@ -110,13 +113,13 @@ const DatePicker = () => {
             </div>
           </div>
         )}
-        {!isLanding &&(
+        {isSearchRoom && (
           <div className="datepicker__inputs-arrow">
             <input
               onClick={() => setOpen(!open)}
               className="datepicker__input"
               type="text"
-              value={formattedDateRange}  // Показываем диапазон дат
+              value={formattedDateRange} // Показываем диапазон дат
               placeholder="ДД.ММ.ГГГГ - ДД.ММ.ГГГГ"
               readOnly
             />
