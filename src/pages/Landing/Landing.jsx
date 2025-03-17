@@ -10,7 +10,7 @@ function Landing() {
         <div className="landing__card">
           <DatePicker />
           <Dropdown />
-          <LargeButton />
+          <LargeButton text="подобрать номер"/>
         </div>
         <p className="landing__text">
           Лучшие номера для вашей работы, отдыха и просто вдохновения

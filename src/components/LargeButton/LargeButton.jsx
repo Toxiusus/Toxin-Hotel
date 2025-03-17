@@ -1,10 +1,10 @@
 import "./LargeButton.scss";
 
-function LargeButton() {
+function LargeButton({text}) {
   return (
     <a href="/search-room">
       <button className="large btn-reset">
-        <span>Подобрать номер</span>
+        <span>{text}</span>
       </button>
     </a>
   );

@@ -23,11 +23,11 @@ body {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Устанавливаем минимальную высоту 100% высоты экрана */
+  min-height: 100vh; 
 }
 
 .page-content {
-  flex: 1; /* Заполняем оставшееся пространство между хедером и футером */
+  flex: 1;
 }
 
 .container {

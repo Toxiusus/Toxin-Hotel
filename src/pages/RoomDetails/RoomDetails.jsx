@@ -231,10 +231,10 @@ function RoomDetails() {
             </section>
           </div>
         </div>
-        <div>
+        <div className="room-details__card">
           <DatePicker/>
           <Dropdown />
-          <LargeButton />
+          <LargeButton text="забронировать"/>
         </div>
       </div>
     </div>
